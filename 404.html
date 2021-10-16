@@ -15,7 +15,7 @@
 		const path = loc.pathname;
 		const redir_path = 'https://ruqqus-archives.netlify.app' + path;
 
-		document.getElementById("manual").innerHTML = `If you are not redirected automatically, click <a href="${redir_path}>here</a>."`;
+		document.getElementById("manual").innerHTML = `If you are not redirected automatically, click <a href="${redir_path}">here</a>.`;
 
 		setTimeout(() => {
 			window.location.href = redir_path;
