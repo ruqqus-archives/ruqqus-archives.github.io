@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ruqqus Archives - Moved</title>
+</head>
+<body onload="redirect()">
+	<h1>This page has been moved</h1>
+	<p>The page you are looking for has been moved to <a href="https://ruqqus-archives.netlify.app/index.html">ruqqus-archives.netlify.app</a>. You will be automatically redirected shortly.</p>
+	<p id="manual"></p>
+</body>
+<script type="text/javascript">
+	function main() {
+		const loc = new URL(window.location.href);
+		const path = loc.pathname;
+		const redir_path = 'https://ruqqus-archives.netlify.app' + path;
+
+		document.getElementById("manual").innerHTML = `If you are not redirected automatically, click <a href="${redir_path}>here</a>."`;
+
+		setTimeout(() => {
+			window.location.href = redir_path;
+		}, 1500);
+	};
+</script>
+</html>
